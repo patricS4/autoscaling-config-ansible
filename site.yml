@@ -3,5 +3,4 @@
   vars_files:
   - vars/autoscaling.yml
   roles:
-  - common
   - master
