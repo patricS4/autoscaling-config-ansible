@@ -33,12 +33,12 @@
     path: "{{ autoscaling_home }}/{{ autoscaling_env }}"
   register: virtualenv_installed
 
-- name: Source autoscaling python environment
-  ansible.builtin.lineinfile:
-    path=/home/{{autoscaling_user}}/.bashrc
-    line="source '{{ autoscaling_home }}/{{ autoscaling_env }}/bin/activate'"
-    regexp="^source '{{ autoscaling_home }}/{{ autoscaling_env }}/bin/activate'"
-    state=present
-    insertafter=EOF
-  become_user: "{{ autoscaling_user }}"
-  when: virtualenv_installed.stat.exists == True
+#- name: Source autoscaling python environment
+#  ansible.builtin.lineinfile:
+#    path=/home/{{autoscaling_user}}/.bashrc
+#    line="source '{{ autoscaling_home }}/{{ autoscaling_env }}/bin/activate'"
+#    regexp="^source '{{ autoscaling_home }}/{{ autoscaling_env }}/bin/activate'"
+#    state=present
+#    insertafter=EOF
+#  become_user: "{{ autoscaling_user }}"
+#  when: virtualenv_installed.stat.exists == True
