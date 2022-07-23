@@ -24,7 +24,7 @@
 
 - name: Install pip packages
   pip:
-    name: [cython,requests,pyyaml,pandas]
+    name: [cython,requests,pyyaml,pandas,numpy,matplotlib]
     virtualenv: "{{ autoscaling_home }}/{{ autoscaling_env }}"
   become_user: "{{ autoscaling_user }}"
 
